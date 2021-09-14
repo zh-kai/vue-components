@@ -7,6 +7,8 @@ PACKAGE_NAME=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
 
+git add .
+git commit -m "chore: upgrade"
 
 if [ -z "$1" ]; then
 npm version patch
@@ -19,9 +21,6 @@ PACKAGE_VERSION=$(cat package.json \
   | head -1 \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
-
-git add .
-git commit -m "chore: $PACKAGE_NAME-$PACKAGE_VERSION"
 git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
 
 git push origin --tags
