@@ -24,6 +24,6 @@ PACKAGE_VERSION=$(cat package.json \
 
 
 git add .
-git commit -m "Chore: Upgrade to %s"
+git commit -m "Chore: Upgrade to $PACKAGE_VERSION"
 git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
 git push origin --tags

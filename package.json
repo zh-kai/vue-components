@@ -1,6 +1,6 @@
 {
   "name": "@web3/vue-components",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./dist/vue-components.umd.js",
   "author": "zh_kai0531@163.com",
   "description": "自用 components",
