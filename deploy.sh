@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/bin/bash 
+set -e
 TestEnv="test"
 PACKAGE_NAME=$(cat package.json \
   | grep name \
@@ -6,14 +7,13 @@ PACKAGE_NAME=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
 
-npm run build
 
 if [ -z "$1" ]; then
-npm version release
+npm version patch
 fi
 if test $1 = $TestEnv 
 then
-   npm version patch
+   npm version prerelease
 fi
 
 PACKAGE_VERSION=$(cat package.json \
