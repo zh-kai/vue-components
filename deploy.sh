@@ -5,7 +5,8 @@ PACKAGE_NAME=$(cat package.json \
   | grep name \
   | head -1 \
   | awk -F: '{ print $2 }' \
-  | sed 's/[",]//g')
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
 
 git add .
 git commit -m "chore: upgrade"
@@ -20,7 +21,8 @@ PACKAGE_VERSION=$(cat package.json \
   | grep version \
   | head -1 \
   | awk -F: '{ print $2 }' \
-  | sed 's/[",]//g')
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
 git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
 
 git push origin --tags
