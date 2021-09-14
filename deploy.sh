@@ -22,7 +22,7 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-npm publish
+npm publish --access=public
 git add .
 git commit -m "Chore: Upgrade to $PACKAGE_VERSION"
 git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
