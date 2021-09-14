@@ -10,9 +10,7 @@ PACKAGE_NAME=$(cat package.json \
 
 if [ -z "$1" ]; then
 npm version patch
-fi
-if test $1 = $TestEnv 
-then
+else test $1 = $TestEnv 
    npm version prerelease
 fi
 
