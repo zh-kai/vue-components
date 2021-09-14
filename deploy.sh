@@ -12,7 +12,7 @@ npm run build
 if [ -z "$1" ]; then
 npm version patch -git-tag-version false
 else test $1 = $TestEnv 
-   npm version prerelease
+   npm version prerelease --preid=alpha -git-tag-version false
 fi
 
 PACKAGE_VERSION=$(cat package.json \
