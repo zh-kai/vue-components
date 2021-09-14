@@ -1,7 +1,7 @@
 {
-  "name": "vue-components",
+  "name": "@web3/vue-components",
   "version": "0.1.0",
-  "main": "dist/js/main.js",
+  "main": "./dist/vue-components.umd.js",
   "author": "zh_kai0531@163.com",
   "description": "自用 components",
   "private": false,
@@ -17,7 +17,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --dest dist ./src/main.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "@vue/composition-api": "^1.1.5",
