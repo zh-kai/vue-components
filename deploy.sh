@@ -9,10 +9,10 @@ PACKAGE_NAME=$(cat package.json \
   | tr -d '[[:space:]]')
 
 git add .
-git commit -m "chore: upgrade"
+git commit -m 'update'
 
 if [ -z "$1" ]; then
-npm version patch
+npm version patch -m "Chore: Upgrade to %s"
 else test $1 = $TestEnv 
    npm version prerelease
 fi
