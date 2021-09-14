@@ -1,3 +1,4 @@
+#!/bin/bash -e
 TestEnv="test"
 PACKAGE_NAME=$(cat package.json \
   | grep name \
