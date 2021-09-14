@@ -8,11 +8,9 @@ PACKAGE_NAME=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-git add .
-git commit -m 'update'
-
+npm run build
 if [ -z "$1" ]; then
-npm version patch -m "Chore: Upgrade to %s"
+npm version patch -git-tag-version false
 else test $1 = $TestEnv 
    npm version prerelease
 fi
@@ -23,6 +21,9 @@ PACKAGE_VERSION=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
-git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
 
+
+git add .
+git commit -m "Chore: Upgrade to %s"
+git tag "$PACKAGE_NAME-$PACKAGE_VERSION"
 git push origin --tags
