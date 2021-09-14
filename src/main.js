@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import App from './App.vue'
+import ScrollIn from './components/scroll-in.vue'
 
-Vue.config.productionTip = false
+const install = (Vue) => {
+  Vue.component('ScrollIn', ScrollIn)
+}
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+export default {
+  install
+}

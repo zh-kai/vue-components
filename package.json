@@ -1,13 +1,26 @@
 {
   "name": "vue-components",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/js/main.js",
+  "author": "zh_kai0531@163.com",
+  "description": "自用 components",
+  "private": false,
+  "keywords": [
+    "vue",
+    "components",
+    "scroll"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "项目的git地址"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --dest dist ./src/main.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.1.5",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
@@ -38,5 +51,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "license": "MIT"
 }

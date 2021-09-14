@@ -1,0 +1,77 @@
+/* fade */
+.scroll-in-fade {
+  transition-property: opacity;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.scroll-in-fade.scroll-in-fade__show {
+  opacity: 1;
+  transition-duration: var(--scroll-in-duration);
+  transition-delay: var(--scroll-in-delay);
+}
+
+.scroll-in-fade__hide {
+  opacity: 0;
+}
+
+/* fade up */
+.scroll-in-fade-up {
+  transition-property: opacity, transform;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.scroll-in-fade-up.scroll-in-fade-up__show {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: var(--scroll-in-duration);
+  transition-delay: var(--scroll-in-delay);
+}
+
+.scroll-in-fade-up__hide {
+  transform: translateY(66px); /* 66 大顺 */
+  opacity: 0;
+}
+
+/* fade down */
+.scroll-in-fade-down {
+  transition-property: opacity, transform;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.scroll-in-fade-down.scroll-in-fade-down__show {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: var(--scroll-in-duration);
+  transition-delay: var(--scroll-in-delay);
+}
+
+.scroll-in-fade-down__hide {
+  transform: translateY(-66px); /* 66 大顺 */
+  opacity: 0;
+}
+
+/* fade left */
+.scroll-in-fade-left {
+  transition-property: opacity, transform;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.scroll-in-fade-left.scroll-in-fade-left__show {
+  transform: translateX(0);
+  opacity: 1;
+  transition-duration: var(--scroll-in-duration);
+  transition-delay: var(--scroll-in-delay);
+}
+
+.scroll-in-fade-left__hide {
+  transform: translateX(66px); /* 66 大顺 */
+  opacity: 0;
+}
