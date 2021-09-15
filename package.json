@@ -1,6 +1,6 @@
 {
-  "name": "web3-component-test1",
-  "version": "1.0.26",
+  "name": "@web2/component-test1",
+  "version": "1.0.27",
   "main": "dist/vue-components.umd.js",
   "author": "web3dingxilin",
   "description": "自用 components",
